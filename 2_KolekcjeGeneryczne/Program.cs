@@ -10,7 +10,21 @@ namespace _2_KolekcjeGeneryczne
     {
         static void Main(string[] args)
         {
-           
+            var liczby = new List<int>();
+            var pojemnosc = -1;
+            while (true)
+            {
+                if (liczby.Capacity!=pojemnosc)
+                {
+                    pojemnosc=liczby.Capacity;
+                    Console.WriteLine(pojemnosc);
+                }
+
+                liczby.Add(1);
+
+            }
+
+
         }
     }
 }
