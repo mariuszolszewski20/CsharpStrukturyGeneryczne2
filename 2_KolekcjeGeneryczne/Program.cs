@@ -16,12 +16,31 @@ namespace _2_KolekcjeGeneryczne
             kolejka.Enqueue(new Pracownik { Imie = "Maromek", Nazwisko = "Puczyk" });
             kolejka.Enqueue(new Pracownik { Imie = "Aga", Nazwisko = "Kuczka" });
 
+            Console.WriteLine("kolejka");
+           
+            
             while (kolejka.Count>0)
             {
                 var pracownik = kolejka.Dequeue();
                 Console.WriteLine(pracownik.Imie+"   "+pracownik.Nazwisko);
             }
-                
+
+
+            Console.WriteLine("  ");
+            Stack<Pracownik> stos = new Stack<Pracownik>();
+            stos.Push(new Pracownik { Imie = "Marcin", Nazwisko = "Nowak" });
+            stos.Push(new Pracownik { Imie = "Henio", Nazwisko = "Spejson" });
+            stos.Push(new Pracownik { Imie = "Maromek", Nazwisko = "Puczyk" });
+            stos.Push(new Pracownik { Imie = "Aga", Nazwisko = "Kuczka" });
+
+
+            Console.WriteLine("STOS");
+            while (stos.Count > 0)
+            {
+                var pracownik = stos.Pop();
+                Console.WriteLine(pracownik.Imie + "   " + pracownik.Nazwisko);
+            }
+
         }
     }
 
