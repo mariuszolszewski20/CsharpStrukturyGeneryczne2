@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ListaTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="KolejkaTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
