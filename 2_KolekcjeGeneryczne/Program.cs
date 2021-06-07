@@ -14,11 +14,55 @@ namespace _2_KolekcjeGeneryczne
 
             //Console.WriteLine("  ");
             //Stos();
-
             // HashSet();
             //  LinkedList();
-            //  LinkedList();
+            // LinkedList2();
 
+           // Dictionary();
+
+        }
+
+        private static void Dictionary()
+        {
+            var pracownicy = new Dictionary<string, List<Pracownik>>();
+            pracownicy.Add("Ksiegowosc", new List<Pracownik> { new Pracownik { Nazwisko = "Nowak" },
+                                                          new Pracownik { Nazwisko = "Kowal" },
+                                                          new Pracownik { Nazwisko = "Olszewski" }});
+
+
+            pracownicy["Ksiegowosc"].Add(new Pracownik { Nazwisko = "Nowak" });
+
+
+
+            pracownicy.Add("Informatyka", new List<Pracownik> { new Pracownik { Nazwisko = "Powolnik" },
+                                                          new Pracownik { Nazwisko = "BrakCzasu" }});
+
+
+
+            foreach (var item in pracownicy)
+
+
+            {
+
+                Console.WriteLine("Dzial : " + item.Key);
+                foreach (var pracownik in item.Value)
+                {
+                    Console.WriteLine(pracownik.Nazwisko);
+                }
+                Console.WriteLine();
+
+            }
+
+            Console.WriteLine("Pracownicy z Ksiegowosci");
+            foreach (var item in pracownicy["Ksiegowosc"])
+
+            {
+                Console.WriteLine(item.Nazwisko);
+            }
+        }
+
+        private static void LinkedList2()
+        {
             LinkedList<int> lista = new LinkedList<int>();
             lista.AddFirst(5);
             lista.AddFirst(6);
@@ -31,12 +75,11 @@ namespace _2_KolekcjeGeneryczne
             lista.AddBefore(elementPierwszy, 20);
 
             var wezel = lista.First;
-            while (wezel!=null)
+            while (wezel != null)
             {
                 Console.WriteLine(wezel.Value);
                 wezel = wezel.Next;
             }
-
         }
 
         private static void LinkedList()
