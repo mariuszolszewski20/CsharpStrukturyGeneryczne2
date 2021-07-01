@@ -18,8 +18,72 @@ namespace _2_KolekcjeGeneryczne
             //  LinkedList();
             // LinkedList2();
 
-           // Dictionary();
+            // Dictionary();
 
+            // SortedDictionary();
+            // SortedList();
+
+            var set = new SortedSet<int>();
+            set.Add(8);
+            set.Add(6);
+            set.Add(4);
+            set.Add(3);
+            set.Add(2);
+            set.Add(1);
+
+            foreach (var item in set)
+            {
+                Console.WriteLine(item);
+            }
+
+            var set1 = new SortedSet<string>();
+            set1.Add("Pan");
+            set1.Add("Jan");
+            set1.Add("Fan");
+            set1.Add("Kan");
+            
+
+
+            foreach (var item in set1)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void SortedList()
+        {
+            var listaPosortowana = new SortedList<int, string>();
+
+            listaPosortowana.Add(1, "jeden");
+            listaPosortowana.Add(3, "Czy");
+            listaPosortowana.Add(2, "dwa");
+            listaPosortowana.Add(4, "sztery");
+
+            foreach (var item in listaPosortowana)
+            {
+                Console.WriteLine(item.Value);
+            }
+        }
+
+        private static void SortedDictionary()
+        {
+            var pracownicy = new SortedDictionary<string, List<Pracownik>>();
+            pracownicy.Add("Sprzedarz", new List<Pracownik> { new Pracownik { Imie="Jan",Nazwisko = "Nowak" },
+                                                          new Pracownik { Imie="Koan",Nazwisko = "Kowal" },
+                                                          new Pracownik { Imie="Bartosz",Nazwisko = "Olszski" }});
+
+            pracownicy.Add("Informatyka", new List<Pracownik> { new Pracownik { Imie="Jan",Nazwisko = "Nowak" },
+                                                          new Pracownik { Imie="Burek",Nazwisko = "Olewski" }});
+
+
+            pracownicy.Add("Ksiegowosc", new List<Pracownik> { new Pracownik { Imie="Henryk",Nazwisko = "Kowak" },
+                                                              new Pracownik { Imie="Stach",Nazwisko = "Powal" },
+                                                          new Pracownik { Imie="Ignac",Nazwisko = "Kszal" },
+                                                          new Pracownik { Imie="Manio",Nazwisko = "Olszewski" }});
+            foreach (var item in pracownicy)
+            {
+                Console.WriteLine("ilość pracowników w dziale {0}  wynosi  {1}", item.Key, item.Value.Count);
+            }
         }
 
         private static void Dictionary()
