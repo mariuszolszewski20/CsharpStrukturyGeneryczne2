@@ -10,7 +10,7 @@ namespace _3_KlasyInterfejsyGeneryczne
     {
         static void Main(string[] args)
         {
-            var kolejka = new DuzaKolejka<double>();
+            var kolejka = new KolejkaKlowa<double>();
 
             WprowadznieDanych(kolejka);
             PrzewtwarzanieDanych(kolejka);
