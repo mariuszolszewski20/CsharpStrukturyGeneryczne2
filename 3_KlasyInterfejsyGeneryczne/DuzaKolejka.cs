@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace _3_KlasyInterfejsyGeneryczne
 {
@@ -15,22 +16,38 @@ namespace _3_KlasyInterfejsyGeneryczne
 
         public virtual bool JestPusty
         {
-        get 
+            get
             {
-                return kolejka.Count == 0; 
+                return kolejka.Count == 0;
             }
-        
+
         }
-        
 
-    public virtual T Czytaj()
-    {
+
+        public virtual T Czytaj()
+        {
             return kolejka.Dequeue();
-    }
+        }
 
-    public virtual void Zapisz(T wartosc)
-    {
+        public virtual void Zapisz(T wartosc)
+        {
             kolejka.Enqueue(wartosc);
+        }
+        public IEnumerator<T> GetEnumerator()
+        {
+            //return kolejka.GetEnumerator();
+
+            //Filtrowanie
+            foreach (var item in kolejka)
+            {
+                yield return item;
+            }
+        }
+       IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+
+        }
+
     }
-}
 }

@@ -1,6 +1,8 @@
-﻿namespace _3_KlasyInterfejsyGeneryczne
+﻿using System.Collections.Generic;
+
+namespace _3_KlasyInterfejsyGeneryczne
 {
-    public interface IKolejka<T>
+    public interface IKolejka<T>:IEnumerable<T>
     {
         bool JestPelny { get; }
         bool JestPusty { get; }
