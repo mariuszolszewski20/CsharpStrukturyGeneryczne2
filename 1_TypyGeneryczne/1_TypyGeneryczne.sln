@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_KlasyInterfejsyGeneryczne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_KlasyInterfejsyGeneryczne Test", "..\3_1 Interfejcy Testy\3_KlasyInterfejsyGeneryczne Test.csproj", "{8D8E13D7-CCF3-4B84-AADA-82DE691BE8E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_1_MetodyDelegatyGeneryczne", "..\4_1_MetodyDelegatyGeneryczne\4_1_MetodyDelegatyGeneryczne.csproj", "{E1BA8A0E-B444-4F15-AAC9-9836A698432E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8D8E13D7-CCF3-4B84-AADA-82DE691BE8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D8E13D7-CCF3-4B84-AADA-82DE691BE8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8E13D7-CCF3-4B84-AADA-82DE691BE8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BA8A0E-B444-4F15-AAC9-9836A698432E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BA8A0E-B444-4F15-AAC9-9836A698432E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BA8A0E-B444-4F15-AAC9-9836A698432E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BA8A0E-B444-4F15-AAC9-9836A698432E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
