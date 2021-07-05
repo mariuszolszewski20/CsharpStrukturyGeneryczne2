@@ -8,15 +8,18 @@ namespace _4_1_MetodyDelegatyGeneryczne
 {
     class Program
     {
+        static void KonsolaWypisz(double dane)
+        {
+        Console.WriteLine(dane);
+        }
         static void Main(string[] args)
         {
             var kolejka = new KolejkaKlowa<double>();
-
+            
             WprowadznieDanych(kolejka);
-            foreach (var item in kolejka)
-            {
-                Console.WriteLine(item);
-            }
+           
+            kolejka.Drukuj(KonsolaWypisz); 
+            
             PrzewtwarzanieDanych(kolejka);
 
         }

@@ -9,5 +9,7 @@ namespace _4_1_MetodyDelegatyGeneryczne
 
         T Czytaj();
         void Zapisz(T wartosc);
+
+       
     }
 }

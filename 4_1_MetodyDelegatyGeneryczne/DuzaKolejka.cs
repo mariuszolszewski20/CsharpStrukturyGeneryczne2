@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace _4_1_MetodyDelegatyGeneryczne
 {
@@ -33,6 +34,9 @@ namespace _4_1_MetodyDelegatyGeneryczne
         {
             kolejka.Enqueue(wartosc);
         }
+
+       
+
         public IEnumerator<T> GetEnumerator()
         {
             //return kolejka.GetEnumerator();
@@ -49,5 +53,6 @@ namespace _4_1_MetodyDelegatyGeneryczne
 
         }
 
+        
     }
 }
