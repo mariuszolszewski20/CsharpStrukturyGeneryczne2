@@ -8,22 +8,30 @@ namespace _4_1_MetodyDelegatyGeneryczne
 {
     class Program
     {
-        static void KonsolaWypisz(double dane)
-        {
-        Console.WriteLine(dane);
-        }
+        
         static void Main(string[] args)
         {
+
+            Action<bool> drukuj = x => Console.WriteLine(x);
+
+            Func<double, double> potegowanie = d => d * d;
+            Func<double, double,double> dodaj = (x,y) => (x+y);
+            Predicate<double> jestMniejszeOdSto = d => d < 100;
+
+
+
+            drukuj(jestMniejszeOdSto(potegowanie(dodaj(11, 3))));
+
             var kolejka = new KolejkaKlowa<double>();
             
             WprowadznieDanych(kolejka);
            
-            kolejka.Drukuj(KonsolaWypisz); 
+            kolejka.Drukuj(d => Console.WriteLine(d)); 
             
             PrzewtwarzanieDanych(kolejka);
 
         }
-    
+     
 
 
         private static void PrzewtwarzanieDanych(IKolejka<double> kolejka)

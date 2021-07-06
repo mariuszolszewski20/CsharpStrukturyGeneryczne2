@@ -10,7 +10,7 @@ namespace _4_1_MetodyDelegatyGeneryczne
 
 {
 
-    public delegate void Drukarka<T>(T dane);
+    
     public static class KolejkaExtensions
     {
         public static IEnumerable<Twyjscie> ElementJako<T,Twyjscie>(this IKolejka<T>kolejka)
@@ -24,7 +24,7 @@ namespace _4_1_MetodyDelegatyGeneryczne
             }
         }
 
-        public static void   Drukuj<T>(this IKolejka<T> kolejka,Drukarka<T> wydruk)
+        public static void   Drukuj<T>(this IKolejka<T> kolejka,Action<T> wydruk)
             {
             foreach (var item in kolejka)
             {
